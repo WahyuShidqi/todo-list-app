@@ -1,0 +1,427 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a.link {
+  color: white;
+  text-decoration: none;
+}
+
+a.link:hover {
+  color: lightblue;
+}
+
+body {
+  color: white;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: center;
+
+  margin: 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("/Assets/monstera-leaf-frame-grid-paper-background.jpg") center / cover
+      no-repeat fixed;
+}
+
+main {
+  padding: 5rem 3rem;
+  width: 80%;
+}
+
+section {
+  height: 100%;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+/* text input styling */
+.input-container form {
+  display: flex;
+  padding: 0.5rem 1rem;
+  flex-direction: row;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.741);
+  gap: 0.5rem;
+}
+
+.input-container .text-input {
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding-inline: 0.8rem;
+  font-size: 14px;
+}
+
+/* task list styling */
+
+.list-parent-container {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* tasks-list: checkbox sama title row */
+.tasks-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  height: fit-content;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.tasks-list p {
+  flex: 1 1 auto;
+  padding-inline: 1rem;
+  padding-bottom: 1rem;
+  height: 100%;
+  margin: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  display: block;
+  border-bottom: 1px solid grey;
+}
+
+/* task card container */
+.tasks-container {
+  padding: 2rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.741);
+  color: rgb(74, 73, 73);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* left column wraps tasks-list and meta below it */
+.left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+/* task title wrapper*/
+.task-title {
+  min-width: 0;
+}
+.task-title p {
+  font-weight: 700;
+  color: rgb(74, 73, 73);
+  margin: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: normal;
+}
+
+/* strike-through when completed */
+.task-title.done p {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* meta row (below tasks-list) */
+.task-meta {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: start;
+  font-size: 12px;
+  color: rgba(74, 73, 73, 0.8);
+  margin-left: 3rem;
+}
+
+/* priority badge styling  */
+.priority-badge {
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  font-weight: 700;
+  color: white;
+  text-transform: capitalize;
+  display: inline-block;
+  line-height: 1;
+  font-size: 12px;
+}
+
+/* priority badge untuk bagian UI kartu */
+.priority-badge.low {
+  background-color: rgb(0, 201, 50);
+}
+.priority-badge.normal {
+  background-color: rgb(246, 223, 96);
+  color: black;
+}
+.priority-badge.high {
+  background-color: rgb(255, 81, 0);
+}
+
+/* created-at small text untuk bagian kartunya*/
+.created-at {
+  opacity: 0.8;
+}
+
+/* my custom checkbox */
+input.checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid white;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  flex: 0 0 auto;
+  margin-right: 0.5rem;
+}
+
+input.checkbox:hover {
+  cursor: pointer;
+}
+
+input.checkbox:checked {
+  background-color: rgb(0, 208, 0);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+input.checkbox:checked::after {
+  content: "";
+  border: 2px solid white;
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* buttons styling */
+
+.delete-all-container {
+  display: flex;
+  justify-content: end;
+}
+
+button {
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+button.add-task {
+  background-color: blue;
+}
+button.add-task:hover {
+  background-color: transparent;
+  border-color: blue;
+  color: blue;
+}
+
+button.delete {
+  background-color: red;
+}
+
+button.delete:hover {
+  background-color: transparent;
+  color: red;
+  border-color: red;
+}
+
+button.delete:active {
+  background-color: rgba(255, 0, 0, 0.3);
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button.all-tag {
+  background-color: orange;
+}
+button.all-tag:hover {
+  background-color: transparent;
+  border-color: orange;
+}
+button.all-tag:active {
+  background-color: rgba(255, 166, 0, 0.3);
+}
+button.done-tag {
+  background-color: green;
+}
+button.done-tag:hover {
+  background-color: transparent;
+  border-color: green;
+}
+button.done-tag:active {
+  background-color: rgba(0, 128, 0, 0.3);
+}
+
+/* tag active styling*/
+.tag-active {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08) inset;
+  transform: translateY(0);
+  opacity: 0.95;
+}
+
+/* tags container styling */
+.tags-container {
+  margin-top: 1rem;
+}
+
+/* made by styling */
+.made-by-container p {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+/* no tasks styliing */
+.no-tasks {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.304);
+  height: 40vh;
+  align-items: center;
+  border-radius: 15px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hide-element {
+  display: none;
+}
+
+/* priority selection styling */
+.priority-selection {
+  background-color: transparent;
+  text-align: center;
+  border-radius: 10px 10px 10px 10px;
+  font-weight: bold;
+  color: white;
+  padding-inline: 0.3125rem;
+  outline: none;
+}
+
+.priority-selection option {
+  background-color: white;
+  border-radius: 10px;
+  padding: 0 inherit;
+  color: black;
+}
+
+/* toggle class for priority selection - done via JS depending on the selected value :D */
+
+.low {
+  background-color: rgb(0, 201, 50);
+}
+.normal {
+  background-color: rgb(246, 223, 96);
+}
+.high {
+  background-color: rgb(255, 81, 0);
+}
+
+/* responsive rules */
+@media (max-width: 700px) {
+  main {
+    padding: 2.5rem 1.25rem;
+    width: 95%;
+  }
+
+  .input-container form {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+
+  .priority-selection {
+    width: 100%;
+    padding: 0.4rem;
+    border-radius: 8px;
+  }
+
+  .input-container .text-input {
+    padding-inline: 0.6rem;
+    font-size: 16px;
+  }
+
+  .tasks-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .tasks-container .delete {
+    align-self: flex-end;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .tasks-list {
+    gap: 0.6rem;
+  }
+
+  .task-title p {
+    font-size: 16px;
+  }
+
+  /* .task-meta {
+    justify-content: space-between;
+  } */
+}
+
+@media (max-width: 420px) {
+  body {
+    background-position: top;
+  }
+
+  .input-container form {
+    padding: 0.5rem;
+  }
+
+  .input-container .text-input {
+    font-size: 14px;
+  }
+
+  .priority-selection {
+    font-size: 14px;
+  }
+
+  .tasks-container {
+    padding: 0.75rem 0.8rem;
+  }
+
+  .priority-badge {
+    padding: 0.2rem 0.5rem;
+    font-size: 11px;
+  }
+
+  .created-at {
+    font-size: 11px;
+  }
+
+  .tasks-list input.checkbox {
+    width: 20px;
+    height: 20px;
+  }
+
+  .task-title p {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    display: block;
+  }
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwindCSS CDN :D -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+  </head>
+  <body>
+    <main>
+      <section>
+        <!-- container -->
+        <h1>TO-DO LIST</h1>
+        <div class="input-container">
+          <form action="" method="">
+            <input
+              class="text-input"
+              type="text"
+              placeholder="Input tasks here..."
+            />
+
+            <select class="priority-selection low" name="" id="">
+              <option value="low">Low</option>
+              <option value="normal">Normal</option>
+              <option value="high">High</option>
+            </select>
+
+            <button class="add-task" type="submit">Add</button>
+          </form>
+        </div>
+
+        <!-- tags container -->
+        <div class="tags-container">
+          <button class="all-tag">All</button>
+          <button class="done-tag">Done</button>
+        </div>
+
+        <!-- task list container -->
+        <div>
+          <ol class="list-parent-container">
+            <li class="no-tasks">Nothing to do here...</li>
+
+            <li class="tasks-container">
+              <div class="tasks-list">
+                <input class="checkbox" type="checkbox" />
+                <p>hello world Lorem, ipsum do</p>
+              </div>
+
+              <button class="delete">Delete</button>
+            </li>
+          </ol>
+        </div>
+
+        <!-- delete all button -->
+        <div class="delete-all-container">
+          <button class="delete" onclick="deleteAll()">Delete All</button>
+        </div>
+
+        <!-- made by container -->
+        <div class="made-by-container">
+          <p>
+            Made by Wahyu Shidqi | FSD |
+            <a
+              class="link"
+              href="https://harisenin.com"
+              target="_blank"
+              rel="noopener noreferrrer"
+              >Harisenin.com</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
